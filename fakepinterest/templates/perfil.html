@@ -1,0 +1,15 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+Perfil - {{ usuario }}
+{% endblock %}
+
+{% block body %}
+<body>
+    <h1>Perfil do usuário: {{ usuario }}</h1>
+    <nav>
+        <a href="{{ url_for('logout')}}">Voltar</a>
+    </nav>
+</body>
+{% endblock %}
+
