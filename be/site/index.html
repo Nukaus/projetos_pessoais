@@ -3,15 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="shortcut icon" href="estilos/imagens/favicon.ico" type="image/x-icon">
     <title>Parabéns !!!!</title>
 </head>
 <body>
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    
     <header>
         <h1>De Cristiano para meu Trenzim</h1>
         <div>
-            <img src="imagens/ame.png" alt="">
+            <img src="estilos/imagens/ame.png" alt="">
         </div>
         <nav>
             <a href="#inicio">Home</a>
@@ -19,21 +129,38 @@
         </nav>
     </header>
     <main>
+       
         <div id="secoes">
             <aside>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam totam nulla, aperiam quis nobis assumenda, iusto enim alias quasi cumque consectetur necessitatibus corporis soluta iure dolorum incidunt! Incidunt, quidem a.</p>
+                <h1>Click no Play</h1>
+                <audio id="audio-player" controls loop hidden>
+                    <source src="audio/Sorriso Resplandecente (Violin Cover).mp3" type="audio/mp3">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="gallery">
+                    <img src="estilos/imagens/nossas/001.jpeg" alt="Foto 1">
+                    <img src="estilos/imagens/nossas/002.jpeg" alt="Foto 2">
+                    <img src="estilos/imagens/nossas/003.jpeg" alt="Foto 3">
+                    <img src="estilos/imagens/nossas/004.jpeg" alt="Foto 1">
+                    <img src="estilos/imagens/nossas/005.jpeg" alt="Foto 2">
+                    <img src="estilos/imagens/nossas/006.jpeg" alt="Foto 3">
+                    <img src="estilos/imagens/nossas/007.jpeg" alt="Foto 1">
+                    <img src="estilos/imagens/nossas/008.jpeg" alt="Foto 2">
+                </div>
             </aside>
             <section id="inicio">
                 <h1>Minha Luz, Meu Lar</h1>
-                <div class="versos" id="v1">
-                    <p>
-                        Em teus olhos, vejo o céu, <br>
-                        Um universo inteiro a brilhar, <br>
-                        Cada estrela uma promessa, <br>
-                        De que sempre vou te amar. <br>
-                    </p>
+                <div id="img001">
+                    <div class="versos" id="v1">
+                        <p>
+                            Em teus olhos, vejo o céu, <br>
+                            Um universo inteiro a brilhar, <br>
+                            Cada estrela uma promessa, <br>
+                            De que sempre vou te amar. <br>
+                        </p>
+                    </div>
                 </div>
-                <div id="v2">
+                <div class="versos" id="v2">
                     <p>
                         Teu sorriso é minha manhã, <br>
                         Acalenta meu coração, <br>
@@ -41,15 +168,17 @@
                         És meu porto, minha canção. <br>
                     </p>
                 </div>
-                <div class="versos" id="v3">
-                    <p>
-                        o toque suave da tua mão, <br>
-                        Encontro calma e paz sem fim, <br>
-                        És a melodia que embala a vida, <br>
-                        Minha razão de sorrir assim. <br>
-                    </p>
+                <div  id="img002">
+                    <div class="versos" id="v3">
+                        <p>
+                            o toque suave da tua mão, <br>
+                            Encontro calma e paz sem fim, <br>
+                            És a melodia que embala a vida, <br>
+                            Minha razão de sorrir assim. <br>
+                        </p>
+                    </div>
                 </div>
-                <div id="v4">
+                <div class="versos" id="v4">
                     <p>
                         Nos dias bons, és meu sorriso, <br>
                         Nos dias tristes, meu abrigo fiel, <br>
@@ -57,7 +186,7 @@
                         És meu doce, meu mel. <br>
                     </p>
                 </div>
-                <div id="v5">
+                <div class="versos" id="v5">
                     <p>
                         Prometo ser teu sempre, <br>
                         Teu amor, tua fortaleza, <br>
@@ -65,13 +194,15 @@
                         Pintamos a vida com beleza. <br>
                     </p>
                 </div>
-                <div class="versos" id="v6">
-                    <p>
-                        E assim, declaro em versos, <br>
-                        O que palavras não podem conter, <br>
-                        És minha luz, meu lar, <br>
-                        E pra sempre vou te querer. <br>
-                    </p>
+                <div  id="img003">
+                    <div class="versos" id="v6">
+                        <p>
+                            E assim, declaro em versos, <br>
+                            O que palavras não podem conter, <br>
+                            És minha luz, meu lar, <br>
+                            E pra sempre vou te querer. <br>
+                        </p>
+                </div>
                 </div>
             </section>
         </div>
@@ -80,7 +211,34 @@
         </section>
     </main>
     <footer>
-        <p>Desenvolvido por seu amor</p>
+        <p>Este site foi feito com amor para você!</p>
     </footer>
+    <script>
+                document.addEventListener('scroll', () => {
+    const verses = document.querySelectorAll('.versos');
+    verses.forEach(verse => {
+        const position = verse.getBoundingClientRect().top;
+        if (position < window.innerHeight - 100) {
+            verse.classList.add('visible');
+        }
+    });
+});
+
+window.addEventListener('load', () => {
+        const audio = document.getElementById('background-audio');
+        
+        // Tenta iniciar o áudio
+        audio.play().catch(error => {
+            console.log('Autoplay bloqueado. O áudio será iniciado após interação do usuário.');
+        });
+
+        // Alternativa: exibe botão para iniciar áudio caso seja bloqueado
+        document.body.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+            }
+        });
+    });
+    </script>
 </body>
 </html>
