@@ -10,6 +10,8 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -19,15 +21,16 @@
     --font-padrao: Arial, Helvetica, sans-serif;
     --font-poema: 'Love', 'Times New Roman', serif;
     --font-titulo: 'Valentine', 'Times New Roman', serif;
-    --cor01: #ff93ff;
-    --cor02: #e479fa;
-    --cor03: #c95ff6;
-    --cor04: #ae44f1;
-    --cor05: #932aec;
-    --cor06: black;
+    --font-gostos: 'Poppins', sans-serif;
+    --cor01: #ffe6ff; /* Lilás bem claro */
+    --cor02: #dcb2ff; /* Lavanda suave */
+    --cor03: #b47aff; /* Roxo médio */
+    --cor04: #8a47e6; /* Roxo vibrante */
+    --cor05: #6528d0; /* Roxo escuro */
+    --cor06: #1c1c1c; /* Preto suave */
 }
 body{
-    background-image: linear-gradient(to left, var(--cor03), var(--cor02), var(--cor01));
+    background-image: linear-gradient(to left, var(--cor04), var(--cor03), var(--cor02));
 }
 #click{
     border: 1px solid black;
@@ -58,7 +61,7 @@ header nav{
     margin-left: 600px;    
 }
 nav a{
-    background-color: var(--cor03);
+    background-color: var(--cor04);
     padding: 10px 15px;
     margin: 0 5px;
     border-radius: 5px;
@@ -103,7 +106,7 @@ aside{
     width: 30%;
     max-width: 300px;
     height: 1553px;
-    background-image: linear-gradient(to bottom, var(--cor04), var(--cor03),  var(--cor02));
+    background-image: linear-gradient(to bottom, var(--cor05), var(--cor04), var(--cor03));
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
     overflow-y: auto;
 }
@@ -123,7 +126,7 @@ aside{
 #inicio{
     width: 100vw;
 }
-section h1{
+#tpoema{
     text-align: center;
     font-size: 3em;
     font-family: var(--font-titulo);
@@ -167,9 +170,149 @@ section h1{
 #mensagem{
     width: 800px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    padding: 20px;
 }
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-box h1 {
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.text-box p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.text-box p span {
+    font-weight: bold;
+    color: #ff5e62;
+}
+h1#preferidos{
+    text-align: center;
+    margin: 5vh 0 10vh 0;
+    padding: 10px;
+    font-family: var(--font-gostos);
+    font-weight: 700; /* Define um peso mais forte para os títulos */
+    color: var(--cor06); /* Ou qualquer cor que combine com seu design */
+}
+#gostos{
+    width: 1200px;
+    margin: auto;
+    
+}
+#gostos h1{
+    font-family: var(--font-gostos);
+}
+#gostos section{
+    padding: 10px;
+    margin: 5px;
+}
+.passeios-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.passeios-list li {
+    background-color: var(--cor02);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.passeios-list img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.passeios-list a {
+    text-decoration: none;
+    color: var(--cor06);
+    display: block;
+}
+
+.passeios-list a:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.gift-item {
+    background-color: var(--cor04);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.gift-item p {
+    font-size: 1.2em;
+}
+
+#add-gift {
+    background-color: var(--cor05);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+#gift-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    margin: 100px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
 footer{
-    background: #333;
+    background: #222;
     color: #fff;
     text-align: center;
     padding: 5px 0;

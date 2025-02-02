@@ -149,7 +149,7 @@
                 </div>
             </aside>
             <section id="inicio">
-                <h1>Minha Luz, Meu Lar</h1>
+                <h1 id="tpoema">Minha Luz, Meu Lar</h1>
                 <div id="img001">
                     <div class="versos" id="v1">
                         <p>
@@ -207,8 +207,80 @@
             </section>
         </div>
         <section id="mensagem">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam totam nulla, aperiam quis nobis assumenda, iusto enim alias quasi cumque consectetur necessitatibus corporis soluta iure dolorum incidunt! Incidunt, quidem a.</p>
+            <div class="text-box">
+                <h1>Para você, meu amor</h1>
+                <p>Neste dia especial, quero lembrar o quanto você é incrível. Sua gentileza ilumina o mundo ao seu redor, seu carinho aquece minha vida e sua dedicação me inspira todos os dias. Você é forte, determinada e nunca mede esforços para ver quem ama feliz – e eu sou a prova viva disso.</p>
+                <p>Nos seus dias bons e nos difíceis, quero que nunca se esqueça do quanto você é especial. Sua alegria contagia, sua beleza encanta e seu coração é um presente raro. Eu estarei sempre aqui para te apoiar, te amar e celebrar cada momento ao seu lado.</p>
+                <p>Feliz aniversário, meu amor! Que essa nova fase seja repleta de felicidade, sucesso e tudo o que seu coração desejar. <span>Você merece o mundo.</span> 💖</p>
+            </div>
         </section>
+        <h1 id="preferidos">Momentos Especialmente Pensados para Você</h1>
+        <div id="gostos">
+            <section id="passeios">
+                <h1>Passeios Inesquecíveis</h1>
+                <p>Explore lugares que você adoraria visitar!</p>
+                <ul class="passeios-list">
+                    <li>
+                        <a href="https://www.example.com/detalhes-lugar1">
+                            <img src="imagens/passeio1.jpg" alt="Passeio 1">
+                            <span>Paris, França</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.example.com/detalhes-lugar2">
+                            <img src="imagens/passeio2.jpg" alt="Passeio 2">
+                            <span>Tokyo, Japão</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.example.com/detalhes-lugar3">
+                            <img src="imagens/passeio3.jpg" alt="Passeio 3">
+                            <span>Nova York, EUA</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section id="presentes">
+                <h1>Presentes Perfeitos</h1>
+                <p>Ideias de presentes que você adoraria ganhar!</p>
+                <div class="presentes-ideas">
+                    <div class="gift-item">
+                        <p>🎁 <span>Perfume Dior</span></p>
+                    </div>
+                    <div class="gift-item">
+                        <p>🎁 <span>Bolsa de couro</span></p>
+                    </div>
+                    <div class="gift-item">
+                        <p>🎁 <span>Kit de maquiagem</span></p>
+                    </div>
+                    <button id="add-gift">Adicionar ideia de presente</button>
+                </div>
+            </section>
+            
+            <div id="gift-modal" class="modal">
+                <div class="modal-content">
+                    <h2>Adicionar presente</h2>
+                    <input type="text" id="new-gift" placeholder="Escreva a ideia de presente">
+                    <button onclick="addGift()">Adicionar</button>
+                    <span class="close" onclick="closeModal()">X</span>
+                </div>
+            </div>
+            <section id="papelaria">
+                <h1>Papelaria Fofa</h1>
+                <p>Coisas lindas para organizar e inspirar!</p>
+                <div class="stationery-list">
+                    <div class="stationery-item">
+                        <p>📖 Caderno de anotações <a href="https://www.example.com/caderno">Comprar</a></p>
+                    </div>
+                    <div class="stationery-item">
+                        <p>🖊️ Caneta colorida <a href="https://www.example.com/caneta">Comprar</a></p>
+                    </div>
+                    <div class="stationery-item">
+                        <p>📓 Planner diário <a href="https://www.example.com/planner">Comprar</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <p>Este site foi feito com amor para você!</p>
@@ -240,5 +312,6 @@ window.addEventListener('load', () => {
         });
     });
     </script>
+    <script src="estilos/script.js"></script>
 </body>
 </html>
