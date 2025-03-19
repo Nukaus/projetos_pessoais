@@ -48,8 +48,13 @@ body{
     background-image: linear-gradient(to left, var(--cor04), var(--cor03), var(--cor02));
 }
 
+#audio-player{
+    width: 90vw;
+    padding: 10px;
+}
+
 #inicio{
-    width: 100vw;
+    max-width: 100vw;
 }
 #tpoema{
     text-align: center;
