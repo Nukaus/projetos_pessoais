@@ -29,100 +29,25 @@
     --cor05: #6528d0; /* Roxo escuro */
     --cor06: #1c1c1c; /* Preto suave */
 }
-body{
-    background-image: linear-gradient(to left, var(--cor04), var(--cor03), var(--cor02));
-}
-#click{
-    border: 1px solid black;
-    width: 200px;
-    height: 200px;
-    margin-top: 12vh;
-}
-header{
-    position: fixed;
-    top: 0;
-    height: 12vh;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
+
+#cabeca{
     background-image: linear-gradient(to right, var(--cor06), var(--cor05), var(--cor04));
-    color: white;
-    padding: 10px;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
-    
 }
-header img{
+#navegar img{
     margin-left: 20px;
     width: 50px;
     height: 50px;
 }
-header nav{
-    align-self: center;
-    margin-left: 600px;    
-}
-nav a{
-    background-color: var(--cor04);
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-}
-nav a:hover{
-    text-decoration: underline;
-    background-color: var(--cor05);
-    border-radius: 10px;
-    transition: background 0.3s;
-}
-main{
-    margin-top: 12vh;
-}
-audio{
-    display: block;
-}
-#secoes{
-    display: flex;
-    flex-direction: row;
-}
-#audio-player {
-    margin: auto;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+
+navegar{
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
 }
 
-#audio-player{
-    width: 100%;
-    max-width: 200px;
+body{
+    background-image: linear-gradient(to left, var(--cor04), var(--cor03), var(--cor02));
 }
-aside h1{
-    font-family: var(--font-titulo);
-    font-size: 1em;
-    text-align: center;
-    padding: 5px;
-}
-aside{
-    margin-top: 126px;
-    width: 30%;
-    max-width: 300px;
-    height: 1553px;
-    background-image: linear-gradient(to bottom, var(--cor05), var(--cor04), var(--cor03));
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
-    overflow-y: auto;
-}
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    padding: 10px;
-}
-.gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px 0 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+
 #inicio{
     width: 100vw;
 }
@@ -131,18 +56,19 @@ aside{
     font-size: 3em;
     font-family: var(--font-titulo);
 }
+
 #img001{
-    background: black url(imagens/estrelas500.jpg) bottom center no-repeat fixed;
+    background: black url(imagens/nossas/001.jpeg) top center no-repeat fixed;
     background-size: cover;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
 }
 #img002{
-    background: black url(imagens/maos500.jpg) top center no-repeat fixed;
+    background: black url(imagens/nossas/003.jpeg) center center no-repeat fixed;
     background-size: cover;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
 }
 #img003{
-    background: black url(imagens/velas500.jpg) left center no-repeat fixed;
+    background: black url(imagens/nossas/005.jpeg) top center no-repeat fixed;
     background-size: cover;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
 }
@@ -169,7 +95,7 @@ aside{
 }
 #mensagem{
     width: 800px;
-    margin: auto;
+    margin: auto auto 50px auto;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -178,7 +104,6 @@ aside{
     background: linear-gradient(to right, #ff9966, #ff5e62);
     padding: 20px;
 }
-
 .text-box {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0 15px 0 15px;
@@ -189,47 +114,6 @@ aside{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.text-box h1 {
-    font-size: 2em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.text-box p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    color: #555;
-}
-
-.text-box p span {
-    font-weight: bold;
-    color: #ff5e62;
-}
-h1#preferidos{
-    text-align: center;
-    margin: 5vh 0 10vh 0;
-    padding: 10px;
-    font-family: var(--font-gostos);
-    font-weight: 700; /* Define um peso mais forte para os títulos */
-    color: var(--cor06); /* Ou qualquer cor que combine com seu design */
-}
-#gostos{
-    width: 1200px;
-    margin: auto;
-    
-}
-#gostos h1{
-    font-family: var(--font-gostos);
-    color: var(--cor06);
-}
-#gostos section{
-    padding: 10px;
-    margin: 5px;
-    line-height: 2em;
-    font-size: 1.2em;
-    color: var(--cor06);
-}
 .passeios-list {
     list-style-type: none;
     padding: 0;
@@ -264,79 +148,4 @@ h1#preferidos{
 .passeios-list a:hover {
     transform: scale(1.05);
     transition: 0.3s;
-}
-.gift-item {
-    background-color: var(--cor04);
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-}
-
-.gift-item p {
-    font-size: 1.2em;
-}
-
-#add-gift {
-    background-color: var(--cor05);
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-}
-
-#gift-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-}
-
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    margin: 100px auto;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-#papelaria a {
-    text-decoration: none;
-}
-#papelaria a:hover {
-    text-decoration: underline;
-}
-footer{
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9em;
-}
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1; 
-    background-image: linear-gradient(to left, var(--cor03), var(--cor02), var(--cor01));
 }
