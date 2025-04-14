@@ -51,6 +51,8 @@ body{
 #audio-player{
     width: 90vw;
     padding: 10px;
+    display: none;
+
 }
 
 #inicio{
@@ -153,4 +155,19 @@ body{
 .passeios-list a:hover {
     transform: scale(1.05);
     transition: 0.3s;
+}
+
+.btn-custom {
+    background-color: var(--cor05);
+    color: white;
+    border: none;
+    font-family: var(--font-gostos);
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--cor04);
+    color: white;
 }

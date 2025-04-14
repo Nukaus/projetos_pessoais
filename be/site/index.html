@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meu Site com Bootstrap</title>
     <link rel="shortcut icon" href="estilos/imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/style.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">
     
 </head>
 <body>
@@ -21,9 +22,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#passeios">Passeios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mensagem">Mensagem</a></li>
                 </ul>
             </div>
         </div>
@@ -36,7 +37,7 @@
     </header>
     <section id="inicio" class="container my-5">
             <audio id="audio-player" controls loop autoplay>
-                <source src="audio/Sorriso Resplandecente (Violin Cover).mp3" type="audio/mp3">
+               <source src="audio/Sorriso Resplandecente (Violin Cover).mp3" type="audio/mp3">
                 Seu navegador não suporta áudio.
             </audio>
       <div id="img001">
@@ -126,8 +127,11 @@
             <p>Neste dia especial, quero lembrar o quanto você é incrível. Sua gentileza ilumina o mundo ao seu redor, seu carinho aquece minha vida e sua dedicação me inspira todos os dias. Você é forte, determinada e nunca mede esforços para ver quem ama feliz – e eu sou a prova viva disso.</p>
             <p>Nos seus dias bons e nos difíceis, quero que nunca se esqueça do quanto você é especial. Sua alegria contagia, sua beleza encanta e seu coração é um presente raro. Eu estarei sempre aqui para te apoiar, te amar e celebrar cada momento ao seu lado.</p>
             <p>Feliz aniversário, meu amor! Que essa nova fase seja repleta de felicidade, sucesso e tudo o que seu coração desejar. <span>Você merece o mundo.</span> 💖</p>
-        </div>
+        </div>       
     </section>
+    <div class="text-center my-4">
+        <a href="#navegar" class="btn btn-lg btn-custom">Voltar ao Início</a>
+    </div>
     <footer class="bg-dark text-white text-center py-4">
         <p>&copy; Este site foi feito com amor para você!</p>
     </footer>
@@ -143,7 +147,7 @@
 });
 
 window.addEventListener('load', () => {
-        const audio = document.getElementById('background-audio');
+        const audio = document.getElementById('audio-player');
         
         // Tenta iniciar o áudio
         audio.play().catch(error => {
