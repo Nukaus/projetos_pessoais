@@ -22,7 +22,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-
                     <li class="nav-item"><a class="nav-link" href="#passeios">Passeios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#mensagem">Mensagem</a></li>
                 </ul>
@@ -66,15 +65,15 @@
                   És a melodia que embala a vida, <br>
                   Minha razão de sorrir assim. <br>
               </p>
+              <div>
+                <p>
+                Nos dias bons, és meu sorriso, <br>
+                Nos dias tristes, meu abrigo fiel, <br>
+                Contigo, o mundo é poesia, <br>
+                És meu doce, meu mel. <br>
+                </p>
+            </div>
           </div>
-      </div>
-      <div class="versos" id="v4">
-          <p>
-              Nos dias bons, és meu sorriso, <br>
-              Nos dias tristes, meu abrigo fiel, <br>
-              Contigo, o mundo é poesia, <br>
-              És meu doce, meu mel. <br>
-          </p>
       </div>
       <div class="versos" id="v5">
           <p>
@@ -97,24 +96,24 @@
     </section>
     <section class="container my-5">
         <section id="passeios">
-            <h1>Passeios Inesquecíveis</h1>
+            <h2>Passeios Inesquecíveis</h2>
             <p>Explore lugares que você adoraria visitar!</p>
             <ul class="passeios-list">
                 <li>
                     <a href="https://www.tudosobreparis.com/" target="_blank">
-                        <img src="estilos/imagens/places/NY500.jpg" alt="Passeio 1">
+                        <img src="estilos/imagens/places/Paris500.jpg" alt="Passeio 1">
                         <span>Paris, França</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.japan.travel/pt/destinations/kanto/tokyo/" target="_blank">
-                        <img src="estilos/imagens/places/Paris500.jpg" alt="Passeio 2">
+                        <img src="estilos/imagens/places/Tokyo500.jpg" alt="Passeio 2">
                         <span>Tokyo, Japão</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.novayork.net/" target="_blank">
-                        <img src="estilos/imagens/places/Tokyo500.jpg" alt="Passeio 3">
+                        <img src="estilos/imagens/places/NY500.jpg" alt="Passeio 3">
                         <span>Nova York, EUA</span>
                     </a>
                 </li>
@@ -135,10 +134,10 @@
     <footer class="bg-dark text-white text-center py-4">
         <p>&copy; Este site foi feito com amor para você!</p>
     </footer>
-        <script>
-                document.addEventListener('scroll', () => {
-    const verses = document.querySelectorAll('.versos');
-    verses.forEach(verse => {
+<script>
+    document.addEventListener('scroll', () => {
+        const verses = document.querySelectorAll('.versos');
+        verses.forEach(verse => {
         const position = verse.getBoundingClientRect().top;
         if (position < window.innerHeight - 100) {
             verse.classList.add('visible');
@@ -147,20 +146,23 @@
 });
 
 window.addEventListener('load', () => {
-        const audio = document.getElementById('audio-player');
+    const audio = document.getElementById('audio-player');
         
-        // Tenta iniciar o áudio
-        audio.play().catch(error => {
-            console.log('Autoplay bloqueado. O áudio será iniciado após interação do usuário.');
-        });
-
-        // Alternativa: exibe botão para iniciar áudio caso seja bloqueado
-        document.body.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play();
-            }
-        });
+    // Tenta iniciar o áudio
+    audio.play().catch(error => {
+        console.log('Autoplay bloqueado. O áudio será iniciado após interação do usuário.');
     });
-    </script>
+
+    // Alternativa: exibe botão para iniciar áudio caso seja bloqueado
+    document.body.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+        }
+    });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

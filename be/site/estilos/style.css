@@ -30,10 +30,7 @@
     --cor06: #1c1c1c; /* Preto suave */
 }
 
-#cabeca{
-    background-image: linear-gradient(to right, var(--cor06), var(--cor05), var(--cor04));
-    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
-}
+
 #navegar img{
     margin-left: 20px;
     width: 50px;
@@ -58,24 +55,30 @@ body{
 #inicio{
     max-width: 100vw;
 }
+
+#cabeca{
+    background-image: linear-gradient(to right, var(--cor06), var(--cor05), var(--cor04));
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
+}
+
 #tpoema{
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: var(--font-titulo);
 }
 
 #img001{
-    background: black url(imagens/nossas/001.jpeg) top center no-repeat fixed;
+    background: black url(imagens/nossas/011.png) top center no-repeat fixed;
     background-size: cover;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
 }
 #img002{
-    background: black url(imagens/nossas/003.jpeg) center center no-repeat fixed;
+    background: black url(imagens/nossas/011.png) center center no-repeat fixed;
     background-size: cover;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
 }
 #img003{
-    background: black url(imagens/nossas/005.jpeg) top center no-repeat fixed;
+    background: black url(imagens/nossas/011.png) bottom center no-repeat fixed;
     background-size: cover;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.486);
 }
@@ -118,7 +121,19 @@ body{
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-gostos);
+}
+
+#passeios{
+    font-family: var(--font-gostos);
+}
+
+#passeios h2{
+    font-style: italic;
+}
+
+#passeios p{
+    text-indent: 40px;
 }
 
 .passeios-list {
