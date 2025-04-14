@@ -30,6 +30,9 @@
     --cor06: #1c1c1c; /* Preto suave */
 }
 
+html {
+    scroll-behavior: smooth;
+  }
 
 #navegar img{
     margin-left: 20px;
