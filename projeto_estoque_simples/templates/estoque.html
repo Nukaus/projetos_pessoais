@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{ url_for('home') }}">Estoque</a>
+        </div>
+      </nav>
+    
+    <main>
+        <div class="container mt-5">
+            <section id="titulo">
+                <h1 class="mb-4" style="background-color: #6610f2; color: #fff; padding: 10px; border-radius: 5px;">CADASTRO DE PRODUTOS</h1>
+            </section>
+            <section id="formulario">
+                <form method="post" action="/adicionar" id="agendamentoForm" class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <label for="nome" class="form-label">Produto:</label>
+                        <input type="text" id="produto" name="produto" required class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="qtd" class="form-label">Quantidade:</label>
+                        <input type="text" name="qtd" id="qtd" required class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="preco" class="form-label">Preço unitário:</label>
+                        <input type="text" name="preco" id="preco" required class="form-control">
+                    </div>
+                    <div class="botoes">
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </div>
+                </form>
+            </section>
+            <h4>Agendamentos</h4>
+                <table class="table table-bordered" id="tabelaAgendamentos">
+                    <thead>
+                    <tr>
+                        <th>PRODUTO</th>
+                        <th>QUANTIDADE</th>
+                        <th>PREÇO</th>
+                        <th>PREÇO FINAL</th>
+                        <th>AÇÕES</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Agendamentos serão inseridos aqui -->
+                    </tbody>
+                </table>
+        </div>
+            
+
+<script>
+    const form = document.getElementById('agendamentoForm');
+    const tabela = document.querySelector('#tabelaAgendamentos tbody');
+    const agendamentos = [];
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const produto = document.getElementById('produto').value;
+        const quantidade = document.getElementById('qtd').value;
+        const preco = document.getElementById('preco').value;
+
+        fetch('/adicionar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ produto, quantidade, preco})
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.sucesso) {
+                adicionarLinhaTabela(data.id, data.produto, data.quantidade, data.preco, data.preco_final);
+                form.reset();
+            } else {
+                alert('Erro ao adicionar.');
+            }
+        });
+    });
+
+        // Adicionar ao array
+    function adicionarLinhaTabela(id, produto, quantidade, preco, preco_final) {
+        const linhas = tabela.rows;
+        for (let i = 0; i < linhas.length; i++) {
+            if (linhas[i].cells[0].innerText === produto) {
+                tabela.deleteRow(i);
+                break;
+            }
+        }
+
+        // Adicionar à tabela
+        const row = tabela.insertRow();
+        row.insertCell(0).innerText = produto;
+        row.insertCell(1).innerText = quantidade;
+        row.insertCell(2).innerText = preco;
+        row.insertCell(3).innerText = preco_final;
+
+        // Botão de excluir
+        const cellAcoes = row.insertCell(4);
+        const btnExcluir = document.createElement('button');
+        btnExcluir.className = 'btn btn-danger btn-sm';
+        btnExcluir.innerText = 'Excluir';
+
+        btnExcluir.onclick = function () {
+            fetch('/excluir/' + id, { method: 'DELETE' })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.sucesso) {
+                        row.remove();
+                    } else {
+                        alert('Erro ao excluir');
+                    }
+                });
+        };
+        cellAcoes.appendChild(btnExcluir);
+    }
+</script>
+<!-- Bootstrap JS (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </main>
+</body>
+</html>
