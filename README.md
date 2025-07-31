@@ -1,4 +1,4 @@
-# 💻 Sites Pessoais & Aleatórios
+# 💻 Projetos Pessoais
 
 Este repositório reúne alguns dos meus projetos de sites feitos por diversão, aprendizado ou como forma de presentear pessoas importantes para mim.
 
@@ -18,6 +18,7 @@ Esses projetos são pequenos experimentos que faço para praticar minhas habilid
 - CSS3
 - Bootstrap
 - JavaScript (em alguns projetos)
+- Python
 
 ## 📌 Observações
 
