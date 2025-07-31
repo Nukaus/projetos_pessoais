@@ -1,0 +1,33 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  section {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card-title {
+    font-weight: 600;
+  }
+  
+  footer {
+    font-size: 0.9rem;
+  }
+#perfil{
+    display: flex;
+    padding: 20px;
+    width: 800px;
+    margin: auto;
+}
+
+#foto{
+    border-radius: 50%;
+    
+    box-shadow: 1px 1px 10px 1px rgb(122, 122, 122);
+}

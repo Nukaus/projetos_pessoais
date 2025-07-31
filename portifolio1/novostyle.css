@@ -1,0 +1,366 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/*CONFIG. GLOBAIS*/
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cor0:#8387BE;
+    --cor1:#00BBC9;
+    --cor2:#CACACA;
+    --cor3:#262A69;
+    --cor4:#0C0F3E;
+    --cor5:#010533;
+    --cor6:#000000;
+
+    --font-padrao:  Arial, Helvetica, sans-serif;
+    --font-destaque: "Bebas Neue", serif;
+    --font-barra: "Faculty Glyphic", serif;
+    
+}
+/*CORPO*/
+body{
+    font-family: var(--font-padrao);
+    width: 100%;
+    background-image: linear-gradient(to right, var(--cor3), var(--cor1));
+}
+
+/*CABEÇALHO E NAVEGAÇÃO*/
+header{
+    font-family: var(--font-destaque);
+    position: fixed;
+    top: -1px;
+    width: 100%;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor6));
+    color: white;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.356);
+    display: flex;
+}
+div#nome > p, h1{
+    font-weight: normal;
+}
+div#nome > p{
+    color: rgba(255, 255, 255, 0.452);
+    text-indent: 10px;
+}
+nav{
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: 15px;
+
+}
+nav > a{
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+nav > a:hover{
+    background-color: var(--cor3);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: underline;    
+}
+main{
+    margin: 75px auto 10px auto;
+}
+main p{
+    line-height: 1.5em;
+}
+
+/*PRIMEIRA SEÇÃO*/
+.apresentacao{
+    width: 1000px;
+    margin: auto;
+    display: flex;  
+}
+.sobre, .minha-foto, .sobre2{
+    flex: 1 1 100%;
+    padding: 30px;
+}
+.h1_sobre{
+    font-size: 1.5em;
+    font-family: var(--font-destaque);
+    text-indent: 0px;
+    color: var(--cor2);
+}
+p{
+    text-indent: 30px;
+}
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 7px 4px rgba(0, 0, 0, 0.404);
+}
+/*DIV HABILIDADES*/
+div#habilidades{
+    font-family: var(--font-destaque);
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    background-image: linear-gradient(to left, var(--cor5), var(--cor1), var(--cor5));
+
+    box-shadow: 0px 1px 4px 1px black;
+}
+
+/*SEGUNDA SEÇÃO*/
+section#detalhes{
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+section#detalhes > .esquerda_baixo, section#skills, .direita_baixo{
+    margin: 10px;
+}
+.esquerda_baixo, .direita_baixo{
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.356);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+.hard_soft{
+    font-family: var(--font-destaque);
+    font-weight: normal;
+    text-align: center;
+    color: var(--cor5);
+    font-style: italic;
+    font-size: 2em;
+}
+section#detalhes > section#skills{
+    display: flex;
+   
+}
+section#skills > .skill{
+    flex: 1 1 100%;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.356);
+    margin: 10px;
+    border-radius: 10px 0 10px 0;
+    text-align: justify;
+}
+h3{
+    font-family: var(--font-destaque);
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--cor5);
+    font-style: italic;
+}
+
+/*GRÁFIO*/
+.grafico {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    width: 100%; 
+    height: 300px;
+    padding: 10px;
+}
+
+.descricao span{
+    color: white;
+    display: block;
+    
+    font: normal 0.4em var(--font-barra);
+}
+.porcentagem{
+    padding: 9px;
+    color: white;
+    font: normal 0.8em var(--font-barra);
+    text-indent: 0px;
+}
+.barra {
+    width: 3rem; 
+    background-color: var(--cor6);
+    border-radius: 7px 7px 0 0;
+
+}
+.barra1 {
+    height: 90%;
+}
+
+.barra2 {
+    height: 80%;
+}
+
+.barra3 {
+    height: 70%;
+}
+
+.barra4 {
+    height: 70%; 
+}
+.barra5 {
+    height: 60%; 
+}
+
+.barra6 {
+    height: 40%; 
+}
+
+.barra7 {
+    height: 85%;
+}
+
+/*FOOTER*/
+footer{
+    font-family: var(--font-destaque);
+    color: white;
+    background-color: var(--cor5);
+    text-align: center;
+    padding: 4px;
+}
+
+/*RESPONSIVIDADE*/
+/*TABLETS E CELULARES*/
+@media (max-width: 1024px){
+main{
+     margin-top: 5rem;
+}
+nav{
+    font-size: 1em;
+    margin-right: 0.1em;
+    margin-left: 0.1em;
+}
+.apresentacao{
+    width: 100%;
+}
+.apresentacao{
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+section#detalhes {
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.grafico{
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.barra{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem 0 0 0.5rem ;
+}
+.descricao span{
+    display: inline-block;
+}
+.barra1{
+    width: 90%;
+} 
+.barra2 {
+    width: 80%;
+}
+
+.barra3 {
+    width: 70%;
+}
+
+.barra4 {
+    width: 70%; 
+}
+.barra5 {
+    width: 60%; 
+}
+
+.barra6 {
+    width: 40%; 
+}
+
+.barra7 {
+    width: 85%;
+} 
+
+.esquerda_cima,
+.esquerda_baixo {
+    width: 100%;
+}
+section#sobremim, section#detalhes {
+    width: 100%;
+    padding: 0;
+   
+}
+section#skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+.esquerda_baixo, .direita_baixo{
+    padding: 0;
+    width: 94%;
+    margin: auto;
+}
+.grafico{
+    padding: 0;
+}
+}
+
+/*CELULARES*/
+@media (max-width: 768px){
+    main{
+        margin-top: 4rem;
+    }
+/*MELHOR LEGIBILIDADE*/
+.skill {
+    padding: 0.5rem;
+}
+}
+
+/*CELULARES MENORES*/
+@media (max-width: 500px){
+main{
+    margin-top: 6.5rem;
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+nav > a{
+    font-size: 1rem;
+    margin: 0.5rem;
+    
+}
+section#sobremim, section#detalhes {
+    width: 100%;
+    padding: 0;
+
+}
+div#habilidades{
+    
+    margin: 0;
+}
+section#skills{
+    padding: 0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill{
+    margin: 1px;
+    padding: 0;
+    
+}
+.esquerda_baixo, .direita_baixo{
+    padding: 0;
+    width: 94%;
+    margin: auto;
+}
+.grafico{
+    padding: 0;
+}
+.barra{
+    padding: 0;
+}
+}
+
+

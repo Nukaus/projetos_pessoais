@@ -1,0 +1,349 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Kaushan+Script&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Faculty+Glyphic&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    color: white;
+    background-image:linear-gradient(to top,#14140F, #053D38);
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 0 1rem #0D0D0D;
+}
+main{
+    margin-top: 4.4rem;
+}
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.logo h1 {
+    color: #A3CCAB;
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: "Cinzel", serif;
+}
+
+.logo h2 {
+    color: #34675C;
+    font-size: 0.9rem;
+    margin: 0;
+    font-family: "Cinzel", serif;
+}
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    font: lighter 1em "Cinzel", serif;
+}
+
+.menu ul li {
+    margin: 0 1rem; 
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s; 
+}
+
+.menu ul li a:hover {
+    background-color: #5C6F73; 
+    border-radius: 5rem; 
+}
+
+section{
+    padding: 20rem;
+    margin: 0;
+}
+.title_sobre, 
+.h1_sobre{
+    font-size: 1.5rem;
+    color: #F26800;
+    font-family: "Bebas Neue", sans-serif;
+}
+p{
+    color: #A3CCAB;
+}
+.imagem{
+    width: 250px;
+    height: 265px;
+}
+img{
+    border-radius: 50%;
+}
+
+.inicio{
+    width: 100%;
+    padding: 1rem;
+    background-image: linear-gradient(to left, #34675C, #053D38, #14140F);
+    background-size: cover;
+    background-position: no-repeat;
+    background-position: center;
+}
+.container{
+    display: flex;
+    padding:  0.5rem;
+    margin: auto;
+    width: 80%;
+}
+.sobre, .imagem, .objetivos{
+
+    color: black;
+    flex: 1 1 100%;
+    padding: 0.5rem;
+}
+.title{
+    border: 0.1rem black solid;
+    padding: 0.5rem;
+    text-align: center;
+    background-image: linear-gradient(to left, #A3CCAB, #34675C, #053D38 );
+    box-shadow: 0 0 1rem black;
+}
+
+.detalhes{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    background-image: linear-gradient(to left, #34675C, #053D38, #14140F);
+}
+.grafico {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    width: 100%; 
+    height: 300px;
+    padding: 10px;
+}
+.descricao{
+    font: bolder 0.4em "Faculty Glyphic", sans-serif;
+}
+.descricao span{
+    display: block;
+}
+.porcentagem{
+    color: black;
+    font: bolder 0.8em "Faculty Glyphic", sans-serif;
+}
+.barra {
+    width: 3rem; 
+    background-image: linear-gradient(to top, #7EADBF, #A9B9D9);
+    border-radius: 5px 5px 0 0;
+
+}
+
+.barra1 {
+    height: 90%;
+}
+
+.barra2 {
+    height: 80%;
+}
+
+.barra3 {
+    height: 70%;
+}
+
+.barra4 {
+    height: 70%; 
+}
+.barra5 {
+    height: 60%; 
+}
+
+.barra6 {
+    height: 40%; 
+}
+
+.barra7 {
+    height: 85%;
+} 
+
+.hard_soft{
+    font: italic lighter 1em "Faculty Glyphic", sans-serif;
+    text-decoration: underline;
+}
+
+.container2{
+    display: flex;
+    flex: 1 1 100%;
+    padding: 5px;
+    margin: 10px;
+    width: 90%;
+    justify-content: space-between;
+    gap: 10px;
+}
+.container2 p{
+    text-align: justify;
+    flex: 1 1 100%;
+}
+h3{
+    color: #F26800;
+    text-align: center;
+    text-decoration: underline;
+    
+    font: italic lighter 1em "Faculty Glyphic", sans-serif;
+}
+.esquerda_cima, .esquerda_baixo{
+    background-color: #14140F;
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.2rem #e48842;
+    
+}
+.skills, .skills1, .skills2{
+    background-color: #14140F;
+    flex: 1 1 100%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.2rem #e48842;
+    
+}
+/* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+    .container,
+    .container2 {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    /* Ajustes no header */
+    .header_content {
+        flex-direction:center;
+        align-items:start;
+    }
+
+    .menu ul {
+        flex-direction:inherit;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu ul li {
+        margin: 1rem 0;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    main{
+        margin-top: 5.4rem;
+    }
+    .logo h1 {
+        font-size: 0.8em;
+    }
+
+    .logo h2 {
+        font-size: 0.5em;
+    }
+
+    /* Ajusta o tamanho dos elementos na seção .detalhes */
+    .detalhes {
+        flex-direction: column;
+        padding: 0.5rem;
+        
+    }
+    .grafico{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .barra{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 0.5rem;
+        border-radius: 0.5rem;
+    }
+    .descricao span{
+        display: inline-block;
+    }
+    .barra1{
+        width: 90%;
+    } 
+    .barra2 {
+        width: 80%;
+    }
+    
+    .barra3 {
+        width: 70%;
+    }
+    
+    .barra4 {
+        width: 70%; 
+    }
+    .barra5 {
+        width: 60%; 
+    }
+    
+    .barra6 {
+        width: 40%; 
+    }
+    
+    .barra7 {
+        width: 85%;
+    } 
+
+    .esquerda_cima,
+    .esquerda_baixo {
+        width: 100%;
+    }
+
+    /* Ajusta os textos menores para melhor legibilidade */
+    .menu ul li a {
+        font-size: 0.1rem;
+        padding: 0.5rem 0.1rem;
+    }
+
+    section {
+        padding: 1rem;
+        box-shadow: 0 0 0.5px;
+    }
+
+    /* Ajusta o espaçamento interno */
+    .skills,
+    .skills1,
+    .skills2,
+    .skills3 {
+        padding: 0.5rem;
+    }
+}
+
+/* Responsividade para telas bem pequenas, como smartphones */
+@media (max-width: 480px) {
+    .menu ul li a {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    /* Ajusta o conteúdo principal para ocupar toda a largura */
+    .container, .container2 {
+        width: 100%;
+    }
+
+    .inicio {
+        padding: 0.5rem;
+    }
+
+    .detalhes {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills, .skills1, .skills2, .skills3 {
+        padding: 0.2rem;
+    }
+}
