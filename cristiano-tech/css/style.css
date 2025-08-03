@@ -20,7 +20,7 @@ main{
     margin: auto;
     margin-bottom: 15px;
     text-align: center;
-    background: url(/imagens/pexels-vlad-1445510816-31862950.jpg) no-repeat center center;
+    background: url(../imagens/pexels-vlad-1445510816-31862950.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     color: white;
