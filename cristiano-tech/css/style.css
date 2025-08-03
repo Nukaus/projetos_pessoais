@@ -161,11 +161,25 @@ main{
 
     #btnAcessibilidade{
         top: 96%;
-        right: -56%;
+        right: -50%;
     }
 
     #sobre > h1, #sobre > h2{
         font-size: 16px;
+    }
+
+    .manutencoes{
+        font-size: 12px;
+    }
+
+    .manutencoes > a > h2{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .produtos > a > h2{
+        font-size: 16px;
+        font-weight: bold;
     }
 
 }
