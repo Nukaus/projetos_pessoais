@@ -155,11 +155,7 @@ main{
 
 
 @media (max-width: 760px){
-    .servicos{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    
 
     .manutencoes{
         margin: 10px;
