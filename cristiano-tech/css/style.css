@@ -10,6 +10,8 @@ main{
     width: 100%;
     height: 100%;
 }
+
+
 #navbarNavDropdown{
     margin-left: 65%;
 }
@@ -37,11 +39,11 @@ main{
 }
 
 .conteudo{
-    width: 90%;
+    max-width: 90%;
     margin: auto;
 }
 
-.servicos{
+.servicos, .servicos2{
     display: flex;
     margin: 10px;
     padding: 10px;
@@ -49,7 +51,7 @@ main{
     text-align: center;
 }
 
-.servicos > div > h2{
+.servicos, .servicos2 > div > h2{
     font-size: 20px;
     font-weight: bold;
 }
@@ -86,11 +88,9 @@ main{
     transition: transform 0.3s ease;
 }
 
-
-
 .overflow-auto{
     scroll-behavior: smooth;
-  }
+}
 
 .produtos > a > h2{
     font-size: 20px;
@@ -152,3 +152,28 @@ main{
   a:hover{
     font-size: 1rem;
   }
+
+
+@media (max-width: 760px){
+    #headerchild{
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    #portimg{
+        display: block;
+    }
+
+    .servicos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .manutencoes{
+        margin: 10px;
+    }
+
+}
