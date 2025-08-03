@@ -79,11 +79,18 @@ main{
 }
 
 .produtos{
+    margin: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
     transition: transform 0.3s ease;
 }
+
+
+
+.overflow-auto{
+    scroll-behavior: smooth;
+  }
 
 .produtos > a > h2{
     font-size: 20px;
