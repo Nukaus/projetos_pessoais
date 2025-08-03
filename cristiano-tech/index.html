@@ -4,8 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cristiano tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
-    Olá mundo
+    <main>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"> <img src="imagens/digitaluniverse.png" alt="" width="50px" height="50px" id="logo"> Digital Universe</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="servico">Serviços</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="produto">Produtos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contato">Contatos</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <section>
+            <div id="sobre">
+                <h1>Concerto de celulares e computadores com qualidade e confiança!</h1>
+                <h2>Manutenção de celulares, venda de produtos e concerto de computadores</h2>
+                <button type="button" class="btn btn-primary">Saiba mais</button>
+            </div>
+        </section>
+        <section id="servico">
+            <div class="conteudo">
+                <h1>Serviços</h1>
+                <div class="servicos">
+                    <div class="manutencoes" id="celulares">
+                        <a href="#">
+                            <h2>Manutenção em celulares</h2>
+                            <div class="icones">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <p>Troca de tela, conector de carga, troca de bateria, tampa traseira, lentes de câmera</p>
+                        </a>
+                    </div>
+                    <div class="manutencoes" id="vendas">
+                        <a href="">
+                            <h2>Venda de produtos</h2>
+                            <div class="icones"><i class="bi bi-box-seam"></i> </div>
+                            <p>Carregadores, fones de ouvido e acessorios em geral</p>
+                        </a>
+                    </div>
+                    <div class="manutencoes" id="computadores">
+                        <a href="">
+                            <h2>Manutenção em computadores</h2>
+                            <div class="icones"><i class="bi bi-pc-display"></i></div>
+                            <p>Formatação, limpeza interna, instalção de programas</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="linhacentralizada">
+        <section id="produto">
+            <div class="conteudo">
+                <h1>Produtos</h1>
+                <div class="servicos">
+                    <div class="produtos">
+                        <a href="">
+                            <h2>Carregadores</h2>
+                            <img src="imagens/carregador.png" alt="" width="150" height="225">
+                        </a>
+                    </div>
+                    <div class="produtos">
+                        <a href="">
+                            <h2>Teclado Númerico</h2>
+                            <img src="imagens/teclado_numerico.png" alt="" width="150" height="225">
+                        </a>
+                    </div>
+                    <div class="produtos">
+                        <a href="">
+                            <h2>Hub USB</h2>
+                            <img src="imagens/hub_usb.png" alt="" width="150" height="225">
+                        </a>
+                    </div>
+                    <div class="produtos">
+                        <a href="">
+                            <h2>HeadSet</h2>
+                            <img src="imagens/headset.png" alt="" width="150" height="225">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="linhacentralizada">
+        <section id="contato">
+            <div class="conteudo">
+                <h1>Contato</h1>
+                <div id="formulario">
+                    <form action="" class="w-50">
+                        <div class="mb-3">
+                            <input type="text" placeholder="Nome" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" placeholder="E-mail" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <textarea id="mensagem" class="form-control" placeholder="Mensagem"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-primary">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <a href="https://wa.me/5531982347447?text=Olá%2C%20tenho%20interesse%20no%20seu%20serviço" target="_blank">
+            <button id="btnAcessibilidade" class="btn">
+                <i class="fab fa-whatsapp"></i>
+                <span>Fale comigo no Whatsapp!</span>
+            </button>
+        </a>
+    </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
