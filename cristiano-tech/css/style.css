@@ -155,8 +155,6 @@ main{
 
 
 @media (max-width: 760px){
-    
-
     .manutencoes{
         margin: 10px;
     }
@@ -164,6 +162,10 @@ main{
     #btnAcessibilidade{
         top: 96%;
         right: -56%;
+    }
+
+    #sobre > h1, #sobre > h2{
+        font-size: 16px;
     }
 
 }
