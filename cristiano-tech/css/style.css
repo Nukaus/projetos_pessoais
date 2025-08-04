@@ -57,7 +57,7 @@ main{
 }
 
 .manutencoes{
-    width: 250px;
+    max-width: 300px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
@@ -74,14 +74,16 @@ main{
     
 }
 
-
+.manutencoes > a > p{
+    font-weight: normal;
+}
 
 .icones{
     font-size: 5rem;
 }
 
 .produtos{
-    margin: 10px;
+    margin: 5px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
@@ -156,7 +158,13 @@ main{
 
 @media (max-width: 760px){
     .manutencoes{
-        margin: 10px;
+        margin: 6px;
+        font-size: 12px;
+    }
+
+    .manutencoes > a > h2{
+        font-size: 16px;
+        font-weight: bold;
     }
 
     #btnAcessibilidade{
@@ -166,15 +174,6 @@ main{
 
     #sobre > h1, #sobre > h2{
         font-size: 16px;
-    }
-
-    .manutencoes{
-        font-size: 12px;
-    }
-
-    .manutencoes > a > h2{
-        font-size: 16px;
-        font-weight: bold;
     }
 
     .produtos > a > h2{
