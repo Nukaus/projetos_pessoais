@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
 }
 main{
     width: 100%;
@@ -16,6 +15,20 @@ main{
     margin-left: 65%;
 }
 
+.navbar-brand {
+    font-size: 1.25rem;
+    transition: none !important;
+}
+
+.navbar-brand:hover {
+    font-size: 1.25rem;
+}
+
+#logo{
+    border-radius: 50%;
+}
+
+
 #sobre{
     margin: auto;
     margin-bottom: 15px;
@@ -23,10 +36,21 @@ main{
     background: url(../imagens/pexels-vlad-1445510816-31862950.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    color: #f8f9fa; /* quase branco */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* melhora a leitura */
+    font-weight: 700;
     padding: 10px;
     box-shadow: 2px 1px 8px 2px black;
-    
+}
+
+#sobre > h1, #sobre > h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}
+
+#sobre > h2{
+    margin-bottom: 5px;
 }
 
 .linhacentralizada{
@@ -34,52 +58,23 @@ main{
     margin: 0 auto;
 }
 
-#logo{
-    border-radius: 50%;
-}
 
 .conteudo{
     max-width: 90%;
     margin: 15px auto;
 }
 
-.servicos, .servicos2{
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.servicos{
     display: flex;
     margin: 10px;
     padding: 10px;
     justify-content: space-between;
     text-align: center;
-}
-
-.servicos, .servicos2 > div > h2{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.manutencoes{
-    max-width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    transition: transform 0.3s ease;
-}
-
-.manutencoes > a{
-    text-decoration: none;
-    color: black;
-}
-
-.manutencoes:hover{
-    transform: scale(1.1);
-    
-}
-
-.manutencoes > a > p{
-    font-weight: normal;
-}
-
-.icones{
-    font-size: 5rem;
 }
 
 .produtos{
@@ -94,6 +89,10 @@ main{
     scroll-behavior: smooth;
 }
 
+.overflow-auto::-webkit-scrollbar {
+    display: none;
+  }
+
 .produtos > a > h2{
     font-size: 20px;
     font-weight: bold;
@@ -106,7 +105,8 @@ main{
 }
 
 .produtos:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
+    transition: 0.3s ease;
 }
 
 #formulario{
@@ -156,17 +156,7 @@ main{
   }
 
 
-@media (max-width: 760px){
-    .manutencoes{
-        margin: 6px;
-        font-size: 12px;
-    }
-
-    .manutencoes > a > h2{
-        font-size: 16px;
-        font-weight: bold;
-    }
-
+@media (max-width: 768px){
     #btnAcessibilidade{
         top: 96%;
         right: -50%;
@@ -180,5 +170,9 @@ main{
         font-size: 16px;
         font-weight: bold;
     }
+
+    .overflow-auto::-webkit-scrollbar {
+        display: initial;
+      }
 
 }
