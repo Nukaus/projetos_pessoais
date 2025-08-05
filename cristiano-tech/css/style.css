@@ -114,6 +114,10 @@ main{
     justify-content: flex-end;
 }
 
+#mensagem{
+    resize: none;
+}
+
 #contato{
     margin-bottom: 10px;
 }
@@ -171,8 +175,8 @@ main{
         font-weight: bold;
     }
 
-    .overflow-auto::-webkit-scrollbar {
-        display: initial;
-      }
+    #formulario{
+        justify-content: flex-start;
+    }
 
 }
