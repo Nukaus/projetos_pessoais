@@ -122,44 +122,39 @@ main{
     margin-bottom: 10px;
 }
 
-#btnAcessibilidade {
-position: fixed;
-  bottom: 20px;
-  right: -200px;
-  background-color: #25d366;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  overflow: hidden;
-    
-  }
-
-  #btnAcessibilidade:hover {
-    font-size: 1rem;
-    transition: 0.3s;
-    padding-right: 20px;
-    right: 0;
-  }
-
-  #btnAcessibilidade span{
-    margin-left: 10px;
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
     white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    overflow: hidden;
   }
+  
+.whatsapp-btn.shrink {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
 
-  #btnAcessibilidade:hover span {
-    opacity: 1;
-  }
+.whatsapp-btn.shrink span {
+    display: none;
+}
 
-  a:hover{
-    font-size: 1rem;
-  }
+.whatsapp-btn i {
+    font-size: 24px;
+    margin-right: 8px;
+}
 
+#whatsappBtn {
+    text-decoration: none;
+}
 
 @media (max-width: 768px){
     
@@ -175,24 +170,6 @@ position: fixed;
 
     #formulario{
         justify-content: flex-start;
-    }
-
-    #btnAcessibilidade.shrink {
-        width: 50px;
-        padding: 10px;
-      }
-      
-    #btnAcessibilidade.shrink span {
-        display: none;
-      }
-      
-    #btnAcessibilidade i {
-        font-size: 24px;
-        margin-right: 8px;
-      }
-    
-    #btnAcessibilidade{
-        right: 20px;
     }
 
 }
