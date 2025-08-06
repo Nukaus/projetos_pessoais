@@ -218,20 +218,16 @@ body {
     color: white;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
     
-
-    #sobre > h1, #sobre > h2{
-        font-size: 16px;
+    .section-title h2 {
+        font-size: 2rem;
     }
-
-    .produtos > a > h2{
-        font-size: 16px;
-        font-weight: bold;
+    
+    .service-card {
+        margin-bottom: 30px;
     }
-
-    #formulario{
-        justify-content: flex-start;
-    }
-
 }
