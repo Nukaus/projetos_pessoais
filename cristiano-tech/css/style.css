@@ -45,7 +45,7 @@ body {
     margin: auto;
     margin-bottom: 30px;
     text-align: center;
-    background: url(../imagens/banner.jpg) no-repeat bottom center;
+    background: url(../imagens/banner.jpg) no-repeat right bottom;
     background-size: cover;
     background-attachment: fixed;
     color: #f8f9fa; /* quase branco */
@@ -229,5 +229,10 @@ body {
     
     .service-card {
         margin-bottom: 30px;
+    }
+
+    #sobre{
+        background: url(../imagens/banner.jpg) no-repeat right bottom;
+        background-attachment: none;
     }
 }
