@@ -230,7 +230,7 @@ body {
     }
 
     #sobre{
-        background: url(../imagens/banner.jpg) no-repeat right bottom;
+        background: url(../imagens/banner.jpg) no-repeat center center;
         background-attachment: none;
     }
 }
