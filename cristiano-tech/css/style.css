@@ -70,11 +70,16 @@ body {
 }
 
 .produtos{
+    display: flex;
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
     transition: transform 0.3s ease;
+}
+
+.preco{
+    margin-top: 20px;
 }
 
 .overflow-auto{
