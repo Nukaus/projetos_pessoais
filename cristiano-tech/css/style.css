@@ -61,6 +61,11 @@ body {
     transition: 0.3s ease;
 }
 
+.overflow-auto {
+    justify-content: space-between;
+}
+
+
 .servicos{
     display: flex;
     margin: 0 10px 10px 0;
