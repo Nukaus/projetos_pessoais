@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados do Scan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Resultados da Varredura</h1>
+    
+    <h2>Alvo: {{ alvo }} (IP: {{ ip }})</h2>
+    <p>Intervalo escaneado: Portas TCP {{ range_portas }}</p>
+
+    <h2>Portas Abertas ({{ portas|length }} encontradas)</h2>
+    
+    {% if portas %}
+    <table>
+        <tr>
+            <th>Porta</th>
+            <th>Serviço Comum</th>
+            <th>Banner (Versão)</th>
+            <th>Vulnerabilidades Encontradas</th> </tr>
+        {% for p in portas %}
+        <tr>
+            <td>{{ p.porta }}</td>
+            <td>{{ p.servico_comum }}</td>
+            <td>{{ p.banner | truncate(100) }}</td>
+            
+            <td>
+                {% if p.vulnerabilidades %}
+                    <ul>
+                        {% for cve in p.vulnerabilidades %}
+                            <li>**{{ cve }}**</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    Nenhuma vulnerabilidade conhecida no DB local.
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>Nenhuma porta aberta encontrada no intervalo escaneado.</p>
+    {% endif %}
+
+    
+    
+    <p style="margin-top: 30px;"><a href="/">Escanear Novamente</a></p>
+</body>
+</html>

@@ -1,174 +1,220 @@
 @charset "UTF-8";
 
-*{
+/* ========================================================= */
+/* 1. Reset e Variáveis de Cores (Paleta Premium)           */
+/* ========================================================= */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #f59e0b;
-    --dark-color: #1f2937;
-    --light-gray: #f8fafc;
-}
-
-main{
-    width: 100%;
-    height: 100%;
+    /* Cores de Credibilidade e Tecnologia */
+    --primary-color: #0056b3; /* Azul Profissional (Royal Blue) */
+    --secondary-color: #003366; /* Azul Escuro (Navy) - Fundo de Cards / Destaque Escuro */
+    --accent-color: #ffd700; /* Dourado (Gold) - Destaque de Qualidade */
+    --dark-color: #1a1a1a; /* Fundo do Footer/Dark */
+    --semi-dark-bg: #e0e0e8; /* Fundo principal suave (Light Gray/Blueish) */
+    --text-color-dark: #1f1f2a; /* Texto principal escuro */
+    --text-color-light: #f4f4f9; /* Texto claro para fundos escuros */
+    --link-hover-color: var(--primary-color); /* Usando a cor primária para consistência */
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--semi-dark-bg);
+    color: var(--text-color-dark);
     line-height: 1.6;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal em excesso */
 }
 
-#navbarNavDropdown{
-    margin-left: 65%;
+/* ========================================================= */
+/* 2. Layout e Navegação                                    */
+/* ========================================================= */
+/* Removido o margin-left fixo, usamos ms-auto no HTML para alinhar à direita */
+#navbarNavDropdown {
+    /* Removido: margin-left: 55%; */
+}
+
+.navbar-dark.bg-dark {
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar a barra */
 }
 
 .navbar-brand {
-    font-size: 1.25rem;
-    transition: none !important;
+    font-size: 1.6rem; /* Levemente maior */
+    font-weight: 800; /* Mais peso */
+    color: var(--accent-color) !important;
 }
 
-.navbar-brand:hover {
-    font-size: 1.25rem;
+.nav-link {
+    font-weight: 500;
+    color: var(--text-color-light) !important;
+    transition: color 0.2s ease;
 }
 
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
 
-#sobre{
-    margin: auto;
-    margin-bottom: 30px;
+/* NOVO: Estilo para o botão de orçamento na Navbar (btn-custom-nav) */
+.btn-custom-nav {
+    background: var(--accent-color) !important; /* Dourado como fundo */
+    color: var(--secondary-color) !important; /* Texto em Azul Escuro */
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    font-weight: 700 !important;
+    transition: all 0.3s ease;
+    padding: 8px 20px !important;
+}
+
+.btn-custom-nav:hover {
+    background: var(--secondary-color) !important;
+    color: var(--accent-color) !important; /* Inverte as cores no hover */
+    border-color: var(--accent-color) !important;
+}
+
+/* ========================================================= */
+/* 3. Hero Section (#sobre)                                 */
+/* ========================================================= */
+#sobre {
+    margin: 0;
     text-align: center;
-    background: url(../imagens/banner.jpg) no-repeat right bottom;
+    background: url(../imagens/banner.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    color: #f8f9fa; /* quase branco */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* melhora a leitura */
-    padding: 10px;
-    box-shadow: 2px 1px 8px 2px black;
-}
-
-.linhacentralizada{
-    width: 95%;
-    margin: 0 auto;
-}
-
-.card:hover {
-    transform: scale(1.03);
-    transition: 0.3s ease;
-}
-
-.overflow-auto {
-    justify-content: space-between;
-}
-
-
-.servicos{
+    color: var(--text-color-light); 
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
+    padding: 120px 15px; /* Mais padding para mais impacto visual */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    min-height: 50vh; /* Garante que a seção tenha pelo menos 50% da altura da tela */
     display: flex;
-    margin: 0 10px 10px 0;
-    padding: 10px;
-    justify-content: space-between;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.produtos{
-    display: flex;
-    margin: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
+/* Linha Divisória */
+.linhacentralizada {
+    width: 80%; /* Levemente mais estreita para parecer mais limpa */
+    margin: 40px auto; /* Aumenta o espaçamento */
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Sutil */
+    opacity: 0.5; /* Opacidade reduzida */
+}
+
+/* ========================================================= */
+/* 4. Seções de Conteúdo (Serviços, Diferenciais, Depoimentos)*/
+/* ========================================================= */
+
+/* Todos os ícones de diferenciais e depoimentos */
+#diferenciais i, #depoimentos .bi-quote {
+    color: var(--accent-color); /* Aplica o dourado aos ícones */
     transition: transform 0.3s ease;
 }
 
-.preco{
-    margin-top: 20px;
+#diferenciais .col-md-4:hover i {
+    transform: translateY(-5px); /* Pequeno efeito hover nos ícones */
 }
 
-.overflow-auto{
-    scroll-behavior: smooth;
+/* Estilos de Serviço Premium (Dark/Gold) */
+#servico .card {
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color-light);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Arredondamento suave */
 }
 
-.overflow-auto::-webkit-scrollbar {
-    display: none;
-  }
-
-.produtos > a > h2{
-    font-size: 20px;
-    font-weight: bold;
+#servico .card-body h5 {
+    color: var(--accent-color);
+    font-weight: 700;
 }
 
-.produtos > a{
-    text-decoration: none;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+#servico .card-body i {
+    color: var(--accent-color) !important;
+    padding-bottom: 15px; /* Mais espaço para o ícone */
 }
 
-.produtos:hover {
-    transform: scale(1.03);
-    transition: 0.3s ease;
+/* ========================================================= */
+/* 5. Títulos e CTA (Call to Action)                        */
+/* ========================================================= */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px; /* Reduzido levemente */
 }
 
-#formulario{
-    display: flex;
-    justify-content: flex-end;
+.section-title h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* NOVO: Tamanho adaptativo */
+    font-weight: 800;
+    color: var(--secondary-color);
+    position: relative;
+    margin-bottom: 25px;
 }
 
-#mensagem{
-    resize: none;
+/* Efeito de linha/detalhe sob o título */
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 8px auto 0;
+    border-radius: 2px;
 }
 
-#contato{
-    margin-bottom: 10px;
+.section-title p {
+    font-size: clamp(1rem, 2vw, 1.1rem); /* NOVO: Tamanho adaptativo */
+    color: var(--text-color-dark);
 }
 
-.whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
+/* Botão Principal */
+.btn-custom {
+    background: var(--primary-color);
+    border: 2px solid var(--accent-color); 
     color: white;
-    padding: 10px 16px;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  
-.whatsapp-btn.shrink {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-}
-
-.whatsapp-btn.shrink span {
-    display: none;
-}
-
-.whatsapp-btn i {
-    font-size: 24px;
-    margin-right: 8px;
-}
-
-#whatsappBtn {
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
     text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
+.btn-custom:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão WhatsApp Direto na Seção de Contato */
+.btn-whatsapp-direct {
+    background: #25d366; /* Verde WhatsApp */
+    border-color: #25d366;
+}
+.btn-whatsapp-direct:hover {
+    background: #128c7e; /* Verde Escuro */
+    border-color: #128c7e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================================= */
+/* 6. Footer e Contato                                      */
+/* ========================================================= */
 .contact-section {
-    background: var(--light-gray);
-    padding: 80px 0;
-    
+    background: var(--semi-dark-bg);
+    padding: 60px 0; /* Menos padding que 80px */
 }
 
 .contact-info {
     background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 10px;
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
 }
 
@@ -177,70 +223,126 @@ body {
 }
 
 .contact-item i {
-    color: var(--primary-color);
-    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-size: 2.5rem; /* Ícones ainda maiores para impacto */
     margin-bottom: 10px;
+    display: block;
+}
+
+.contact-info h5, .contact-info p {
+    color: var(--text-color-dark);
 }
 
 .footer {
     background: var(--dark-color);
-    color: white;
+    color: var(--text-color-light);
     padding: 40px 0;
     text-align: center;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
+.social-links a {
+    color: var(--text-color-light) !important;
+    font-size: 1.8rem; /* Ícones sociais maiores */
+    transition: color 0.3s ease;
 }
 
-.section-title h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--dark-color);
-    margin-bottom: 15px;
+.social-links a:hover {
+    color: var(--accent-color) !important;
 }
 
-.section-title p {
-    font-size: 1.2rem;
-    color: #6b7280;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.btn-custom {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+/* ========================================================= */
+/* 7. WhatsApp Flutuante (Melhoria de CTA)                  */
+/* ========================================================= */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
     text-decoration: none;
-    display: inline-block;
-}
-
-.btn-custom:hover {
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    transform: translateY(-2px);
+    background-color: #25d366;
     color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Impede que o texto quebre */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 60px 0;
+.whatsapp-btn i {
+    font-size: 28px;
+    margin-right: 10px;
+    transition: margin 0.3s ease;
+}
+
+/* Estilo para quando o botão encolhe (via JavaScript) */
+.whatsapp-btn.shrink {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.whatsapp-btn.shrink i {
+    margin-right: 0; /* Remove a margem do ícone ao encolher */
+}
+/* O span (texto) some por padrão pois o overflow está hidden e o width encolhe */
+
+/* ========================================================= */
+/* 8. Responsividade (Media Queries)                        */
+/* ========================================================= */
+@media (max-width: 992px) {
+    /* Ajustes para Tablets e Mobile */
+    
+    .navbar-brand {
+        font-size: 1.4rem;
     }
     
+    /* Na navegação colapsada, centraliza os links */
+    .navbar-collapse {
+        text-align: center;
+        padding-bottom: 10px;
+        background-color: var(--secondary-color);
+        border-radius: 0 0 5px 5px;
+    }
+
+    .nav-link {
+        padding: 8px 0;
+    }
+
+    .btn-custom-nav {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    
+    /* Hero Section */
+    #sobre {
+        padding: 80px 15px;
+        min-height: auto;
+        background-attachment: scroll; /* Remove fixed para mobile */
+    }
+
+    /* Reduz o tamanho da fonte nos títulos em telas menores */
     .section-title h2 {
         font-size: 2rem;
     }
     
-    .service-card {
+    /* Footer e Contato */
+    .contact-item {
         margin-bottom: 30px;
     }
-
-    #sobre{
-        background: url(../imagens/banner.jpg) no-repeat center center;
-        background-attachment: none;
+    
+    /* WhatsApp */
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+    .whatsapp-btn i {
+        font-size: 24px;
     }
 }

@@ -1,0 +1,100 @@
+/* -- Variáveis de Cor -- */
+:root {
+    --color-bg: #1e1e1e; /* Fundo Escuro */
+    --color-text: #00ff6a; /* Verde Neon */
+    --color-text-alt: #f0f0f0; /* Branco Suave */
+    --color-accent: #00b34d; /* Destaque Verde */
+    --color-danger: #ff5757; /* Vermelho para Erros */
+    --color-table-bg: #2a2a2a; /* Fundo da Tabela */
+    --font-code: 'Consolas', 'Monaco', monospace;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-alt);
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    padding: 0;
+}
+
+/* -- Títulos e Texto Principal -- */
+h1, h2 {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 5px;
+    margin-top: 30px;
+    font-family: var(--font-code);
+}
+
+p, a {
+    color: var(--color-text-alt);
+}
+
+/* -- Formulário (Input e Botão) -- */
+input[type="text"] {
+    background-color: var(--color-table-bg);
+    color: var(--color-text);
+    border: 1px solid var(--color-accent);
+    padding: 10px;
+    font-size: 16px;
+    font-family: var(--font-code);
+    width: 300px;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-text);
+}
+
+/* -- Tabela de Resultados -- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+    font-family: var(--font-code);
+}
+
+th, td {
+    border: 1px solid var(--color-table-bg);
+    padding: 10px;
+    text-align: left;
+    background-color: var(--color-table-bg);
+    vertical-align: top;
+}
+
+th {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    font-weight: bold;
+}
+
+/* Destacando Vulnerabilidades e Status */
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+    color: var(--color-danger); /* Vulnerabilidades em destaque Vermelho */
+}
+
+/* Texto de erro */
+.error {
+    color: var(--color-danger);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
